@@ -1,0 +1,13 @@
+.groncha-text {
+  font-size: 96px;
+  fill: #c11212;
+  stroke: #000;
+  stroke-width: 6;
+  paint-order: stroke fill;
+}
+
+.scratch {
+  stroke: #a00;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
