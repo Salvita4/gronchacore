@@ -2,20 +2,16 @@ import "./groncha.css";
 
 export default function GronchaLogo() {
   return (
-    <svg viewBox="0 0 600 200" className="w-full max-w-xl">
-      <text
-        x="50%"
-        y="50%"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        className="groncha-text"
-      >
-        GRONCHA
-      </text>
-
-      {/* líneas cruzadas */}
-      <line x1="200" y1="130" x2="400" y2="170" className="scratch" />
-      <line x1="400" y1="130" x2="200" y2="170" className="scratch" />
-    </svg>
+    <div className="logo">
+      <div className="letter g"></div>
+      <div className="letter r"></div>
+      <div className="cross-a"></div>
+      <div className="letter o"></div>
+      <div className="cross-b"></div>
+      <div className="letter n"></div>
+      <div className="letter c"></div>
+      <div className="letter h"></div>
+      <div className="letter a"></div>
+    </div>
   );
 }
