@@ -5,9 +5,11 @@ export default function GronchaLogo() {
     <div className="logo">
       <div className="letter g"></div>
       <div className="letter r"></div>
-      <div className="cross-a"></div>
-      <div className="letter o"></div>
-      <div className="cross-b"></div>
+      <div className="o-container letter">
+        <div className="x"></div>
+        <div className="o"></div>
+        <div className="x"></div>
+      </div>
       <div className="letter n"></div>
       <div className="letter c"></div>
       <div className="letter h"></div>
