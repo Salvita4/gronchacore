@@ -25,9 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+      <header className="w-full h-full"></header>
+      <body className="w-full h-60 dark:bg-background dark:text-foreground" style={{ fontFamily: "var(--font-geist-sans)" }}>
+        <div>
+          {children}
+        </div>
       </body>
+      <footer className="w-full h-full"></footer>
     </html>
   );
 }

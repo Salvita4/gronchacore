@@ -2,7 +2,7 @@
   display:flex;
   gap:30px;
   padding:80px;
-  background:#ffffff;
+  background:#999999;
 }
 
 .letter{
@@ -20,7 +20,7 @@
       rgba(0,0,0,0.03) 4px
     ),
     #c11212;
-  clip-path: polygon(92% 13%, 64% 3%, 31% 3%, 5% 17%, 4% 80%, 18% 93%, 73% 93%, 85% 83%, 85% 69%, 76% 54%, 93% 54%, 93% 39%, 47% 39%, 47% 53%, 66% 53%, 58% 69%, 34% 69%, 26% 60%, 26% 30%, 47% 19%, 77% 30%);
+  clip-path: polygon(95% 20%, 69% 3%, 31% 3%, 5% 17%, 4% 87%, 18% 93%, 73% 93%, 95% 87%, 95% 73%, 80% 58%, 95% 58%, 100% 42%, 41% 42%, 44% 58%, 66% 58%, 58% 73%, 34% 73%, 26% 60%, 26% 30%, 47% 19%, 77% 30%);
   transform: scaleY(0);
   transform-origin: bottom;
   animation: 
@@ -83,10 +83,10 @@
       rgba(0,0,0,0.03) 4px
     ),
     #c11212;
-  clip-path: polygon(71% 4%, 39% 4%, 18% 16%, 17% 87%, 27% 99%, 42% 97%, 47% 83%, 45% 49%, 64% 83%, 82% 98%, 125% 90%, 93% 77%, 70% 47%, 84% 40%, 84% 15%);
+  clip-path: polygon(100% 4%, 40% 4%, 18% 16%, 17% 87%, 0% 99%, 42% 97%, 47% 83%, 47% 49%, 64% 83%, 83% 98%, 99% 99%, 98% 85%, 75% 47%, 89% 40%, 89% 15%);
 
-  /*mask:
-    radial-gradient(circle at 50% 25%, transparent 30px, black 60px);*/
+  mask:
+    radial-gradient(circle at 45% 27%, transparent 20px, black 60px);
 
   transform: scaleY(0);
   transform-origin: bottom;
@@ -94,7 +94,26 @@
     drawLetter 0.8s ease-out forwards,
     shake 0.2s infinite alternate 0.8s;
 }
+.r::after{
+  content:"";
+  position:absolute;
+  inset:0;
 
+  background:
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(90,0,0,0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(70,0,0,0.6) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
 .r::before{
   content:"";
   position:absolute;
@@ -102,7 +121,7 @@
   width:120px;
   height:90px;
 
-  background:#ffff; /* color del fondo */
+  background:#999999; /* color del fondo */
 
   top:35px;
   left:55px;
@@ -113,6 +132,7 @@
 
 /*x*/
 .x{
+  position:absolute;
   width:125px;
   height:150px;
   background:
@@ -125,18 +145,76 @@
     ),
     #c11212;
     clip-path: polygon(43% 0, 35% 9%, 45% 48%, 35% 81%, 43% 97%, 50% 56%, 56% 98%, 65% 81%, 55% 48%, 67% 14%, 61% 0, 51% 40%);
+
+    left:50%;
+    transform:translateX(-50%);
 }
+.x-top{
+  top:-120px;
+}
+
+.x-bottom{
+  bottom:-120px;
+}
+
+
+
+.x::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255,80,80,0.9) 0%,
+      rgba(255,80,80,0.4) 30%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255,70,70,0.8) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+
+.x::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(90,0,0,0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(70,0,0,0.6) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+/*X*/
 
 /*O*/
 .o-container{
+  position:relative;
+
+  width:150px;
+  height:300px;
+
   display:flex;
   align-items:center;
-  flex-direction:column;
   justify-content:center;
-  width:300px;
-  height:450px;
-
 }
+
 
 .o{
   width:150px;
@@ -156,22 +234,40 @@
   animation: 
     drawLetter 0.8s ease-out forwards,
     shake 0.2s infinite alternate 0.8s;
-  /*mask:
-    radial-gradient(circle at 50% 49%, transparent 50px, black 60px);*/
 }
 .o::before{
   content:"";
   position:absolute;
 
-  width:150px;
+  width:130px;
   height:325px;
 
-  background:#ffff; /* color del fondo */
+  background:#999999; /* color del fondo */
 
   top:-15px;
-  left:40px;
+  left:19px;
 
   clip-path: polygon(27% 20%, 18% 30%, 18% 68%, 29% 81%, 62% 81%, 70% 69%, 70% 32%, 63% 20%);
+}
+.o::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(90,0,0,0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(70,0,0,0.6) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: multiply;
+  pointer-events:none;
 }
 /*O*/
 
@@ -193,6 +289,49 @@
     drawLetter 0.8s ease-out forwards,
     shake 0.2s infinite alternate 0.8s;
 }
+.n::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255,80,80,0.9) 0%,
+      rgba(255,80,80,0.4) 30%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255,70,70,0.8) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+
+.n::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(90,0,0,0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(70,0,0,0.6) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+
 /*N*/
 
 /*C*/
@@ -213,7 +352,51 @@
     drawLetter 0.8s ease-out forwards,
     shake 0.2s infinite alternate 0.8s;
 }
+.c::before{
+  content:"";
+  position:absolute;
+  inset:0;
 
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255,80,80,0.9) 0%,
+      rgba(255,80,80,0.4) 30%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255,70,70,0.8) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+
+.c::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(90,0,0,0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(70,0,0,0.6) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+/*C*/
+
+/*H*/
 .h{
   background:
     repeating-linear-gradient(
@@ -231,7 +414,51 @@
     drawLetter 0.8s ease-out forwards,
     shake 0.2s infinite alternate 0.8s;
 }
+.h::before{
+  content:"";
+  position:absolute;
+  inset:0;
 
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255,80,80,0.9) 0%,
+      rgba(255,80,80,0.4) 30%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255,70,70,0.8) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+
+.h::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(90,0,0,0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(70,0,0,0.6) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+/*H*/
+
+/*A*/
 .a{
   background:
     repeating-linear-gradient(
@@ -243,6 +470,10 @@
     ),
     #c11212;
   clip-path: polygon(9% 5%, 24% 14%, 6% 90%, 0% 99%, 25% 92%, 32% 85%, 39% 50%, 53% 50%, 58% 84%, 65% 91%, 90% 100%, 82% 88%, 68% 14%, 84% 5%);
+
+  mask:
+    radial-gradient(circle at 45% 30%, transparent 15px, black 60px);
+
   transform: scaleY(0);
   transform-origin: bottom;
   animation: 
@@ -257,13 +488,34 @@
   width:70px;
   height:115px;
 
-  background:#ffff; /* color del fondo */
+  background:#999999; /* color del fondo */
 
   top: 30px;
-  left:70px;
+  left:73px;
 
   clip-path: polygon(27% 20%, 18% 30%, 18% 68%, 29% 81%, 62% 81%, 70% 69%, 70% 32%, 63% 20%);
 }
+.a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(90,0,0,0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(70,0,0,0.6) 0%,
+      transparent 50%
+    );
+
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+/*A*/
 
 
 /*Animaciones*/
